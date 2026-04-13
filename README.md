@@ -1,17 +1,14 @@
 # 🎮 Video Game Sales Analysis para Sprint 6 da Tripleten: projeto integrado
-
 > Análise exploratória de dados do mercado global de videogames — plataformas, gêneros, regiões e o que realmente impulsiona as vendas.
 
 ---
 
 ## 📌 Sobre o Projeto
-
-Este projeto realiza uma análise completa do dataset de vendas de videogames, cobrindo mais de **16.000 jogos** lançados entre os anos 1980 e 2016. O objetivo é entender os padrões de mercado, identificar plataformas e gêneros lucrativos, comparar preferências regionais e testar hipóteses estatísticas sobre avaliações de usuários.
+Este projeto realiza uma análise completa do dataset de vendas de videogames, cobrindo mais de **16.000 jogos** lançados entre os anos 1980 e 2016. O objetivo é entender os padrões de mercado no **período recente (2013 em diante)**, identificar plataformas e gêneros lucrativos, comparar preferências regionais e testar hipóteses estatísticas sobre avaliações de usuários.
 
 ---
 
 ## 🗂️ Dataset
-
 | Coluna | Descrição |
 |---|---|
 | `name` | Nome do jogo |
@@ -37,9 +34,10 @@ Este projeto realiza uma análise completa do dataset de vendas de videogames, c
 - Criação da coluna `total_sales` (soma de todas as regiões)
 
 ### 2. Análise de Plataformas
+- Recorte temporal aplicado: apenas dados a partir de 2013
 - Identificação das plataformas com maiores vendas totais
 - Análise do ciclo de vida das plataformas (surgimento e declínio)
-- Correlação entre avaliações e vendas por plataforma
+- Correlação entre avaliações e vendas por plataforma (PS4)
 
 ### 3. Análise de Gêneros
 - Distribuição de jogos por gênero
@@ -52,56 +50,48 @@ Este projeto realiza uma análise completa do dataset de vendas de videogames, c
 - Impacto da classificação ESRB nas vendas regionais
 
 ### 5. Testes de Hipótese
-- Teste t de Student para comparação de médias
+- Teste t de Student com avaliação de variâncias (`equal_var`)
 - Xbox One vs PC: avaliações médias de usuários
 - Action vs Sports: avaliações médias de usuários
 
 ---
 
 ## 📊 Principais Descobertas
-
-- **Action** lidera em volume total de vendas, mas **Platform** tem a maior média por jogo — sustentada por franquias como Mario e Sonic
-- As avaliações de **críticos** têm correlação moderada com vendas (0.39), enquanto as de **usuários** praticamente não influenciam (0.11)
-- O **Japão** tem preferências bem distintas de NA e EU, com forte preferência por plataformas japonesas e RPGs
-- Estatisticamente, Xbox One e PC possuem avaliações médias **diferentes** (p ≈ 0), enquanto Action e Sports **não diferem** significativamente (p > 0.1)
+- **Shooter** lidera a média de vendas por título (~1.25M), impulsionado por franquias como Call of Duty. **Action** lidera em volume total mas é o 7º em média — mercado fragmentado e competitivo
+- As avaliações de **críticos** têm influência moderada nas vendas (PS4), enquanto as de **usuários** têm peso menor — marketing, franquia e exclusividade pesam mais
+- O **Japão** tem preferências bem distintas de NA e EU, com forte preferência por RPGs e rating T, enquanto o ocidente é dominado por Action, Shooter e rating M
+- Estatisticamente, Xbox One e PC **não diferem** nas avaliações dos usuários (p = 0.1476), enquanto Action e Sports apresentam diferença significativa (p ≈ 0)
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-
 + **Python**
 + **Pandas**
 + **Matplotlib**
 + **SciPy**
 + **Jupyter**
-+ **Vs code**
++ **VS Code**
 + **Claude**
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-```
 ├── games.csv                  # Dataset original
-├── notebook.ipynb             # Análise completa em Jupyter
+├── notebook_project.ipynb     # Análise completa em Jupyter
 ├── README.md                  # Este arquivo
 └── graficos/
-    ├── platform_sales.png     # Vendas por plataforma
-    ├── genre_analysis.png     # Análise por gênero
-    ├── score_vs_sales.png     # Avaliações vs vendas
-    ├── top_plataformas.png    # Top plataformas por região
-    ├── top_generos.png        # Top gêneros por região
-    └── esrb_rating.png        # ESRB por região
-```
+├── platform_sales.png     # Vendas por plataforma
+├── genre_analysis.png     # Análise por gênero
+├── score_vs_sales.png     # Avaliações vs vendas
+├── top_plataformas.png    # Top plataformas por região
+├── top_generos.png        # Top gêneros por região
+└── esrb_rating.png        # ESRB por região
 
 ---
 
 ## 👤 Autor
-
 Feito com 🎮 e muito `pandas` por **[Luiz Trajano]**  
 [
-
 ![GitHub](https://img.shields.io/badge/GitHub-luiz19190-181717?style=flat&logo=github)
-
 ](https://github.com/luiz19190/Sprint-6-tripleten-projeto-integrado)
-
