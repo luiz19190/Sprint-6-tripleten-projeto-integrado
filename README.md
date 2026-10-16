@@ -71,22 +71,24 @@ Este projeto realiza uma análise completa do dataset de vendas de videogames, c
 + **SciPy**
 + **Jupyter**
 + **VS Code**
-+ **Claude**
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-├── games.csv                  # Dataset original
-├── notebook_project.ipynb     # Análise completa em Jupyter
-├── README.md                  # Este arquivo
-└── graficos/
-├── platform_sales.png     # Vendas por plataforma
-├── genre_analysis.png     # Análise por gênero
-├── score_vs_sales.png     # Avaliações vs vendas
-├── top_plataformas.png    # Top plataformas por região
-├── top_generos.png        # Top gêneros por região
-└── esrb_rating.png        # ESRB por região
+```
+├── games.csv                # Dataset original
+├── notebook_project.ipynb   # Análise completa em Jupyter
+├── README.md                # Este arquivo
+├── LICENSE
+├── platform_sales.png       # Vendas por plataforma
+├── boxplot_sales.png        # Distribuição das vendas globais por plataforma
+├── genre_analysis.png       # Análise por gênero
+├── score_vs_sales.png       # Avaliações vs vendas
+├── top_plataformas.png      # Top plataformas por região
+├── top_generos.png          # Top gêneros por região
+└── esrb_rating.png          # ESRB por região
+```
 
 ---
 
